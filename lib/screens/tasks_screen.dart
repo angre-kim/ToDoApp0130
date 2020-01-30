@@ -5,12 +5,17 @@ class TasksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
+        child: Icon(Icons.add),
+      ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
             //safearea 대신 padding이 있는 container로 변경
-            padding:
-                EdgeInsets.only(top: 60.0, left: 30.0, right: 30.0, bottom: 30.0),
+            padding: EdgeInsets.only(
+                top: 60.0, left: 30.0, right: 30.0, bottom: 30.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -41,7 +46,6 @@ class TasksScreen extends StatelessWidget {
                     fontSize: 18.0,
                   ),
                 ),
-
               ],
             ),
           ),
