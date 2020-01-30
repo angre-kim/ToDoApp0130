@@ -6,7 +6,9 @@ class TasksScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.lightBlueAccent,
         body: Column(
-          children: <Widget>[Icon(Icons.list)],
+          children: <Widget>[
+            Icon(Icons.list),
+            Text('ToDoApp')],
         ));
   }
 }
