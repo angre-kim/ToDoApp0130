@@ -58,6 +58,22 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
+              child: ListView(
+                children: <Widget>[
+                  ListTile(
+                    title: Text('할일 1'),
+                    trailing: Checkbox(value: false),
+                  ),
+                  ListTile(
+                    title: Text('할일 2'),
+                    trailing: Checkbox(value: false),
+                  ),
+                  ListTile(
+                    title: Text('할일 3'),
+                    trailing: Checkbox(value: false),
+                  )
+                ],
+              ),
             ),
           ),
         ],
