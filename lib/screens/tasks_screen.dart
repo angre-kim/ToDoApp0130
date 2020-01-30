@@ -20,7 +20,17 @@ class TasksScreen extends StatelessWidget {
                 backgroundColor: Colors.white,
                 radius: 30.0,
               ),
-              Text('ToDoApp')
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
+                'ToDoApp',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.w700,
+                ),
+              )
             ],
           ),
         ));
