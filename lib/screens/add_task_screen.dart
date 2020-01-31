@@ -16,16 +16,20 @@ class AddTaskScreen extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Text('할일 추가',
+            Text(
+              '할일 추가',
               style: TextStyle(
                 color: Colors.lightBlueAccent,
                 fontSize: 30.0,
-                ),
+              ),
             ),
             TextField(
               autofocus: true,
+              textAlign: TextAlign.center,
             ),
-            FlatButton(),
+            FlatButton(
+
+            ),
           ],
         ),
       ),
