@@ -21,8 +21,12 @@ class TasksScreen extends StatelessWidget {
 
           showModalBottomSheet(
               context: context,
-              isScrollControlled: true,
-              builder: (context) => AddTaskScreen());
+              isScrollControlled: true, //modal 화면이 full screen 되게
+              builder: (context) => SingleChildScrollView(//키보드 위로 창 보이게
+                  child: Container(
+                      padding: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).viewInsets.bottom),
+                      child: AddTaskScreen())));
         },
       ),
       body: Column(
