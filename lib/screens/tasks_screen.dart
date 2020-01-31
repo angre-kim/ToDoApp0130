@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:todoapp0130/widgets/tasks_list.dart';
 
 class TasksScreen extends StatelessWidget {
+
+  Widget buildBottomsheet(BuildContext context) {
+    return Container();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,6 +14,9 @@ class TasksScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
+        onPressed: (){
+          showModalBottomSheet(context: context, builder:buildBottomsheet);
+        },
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
