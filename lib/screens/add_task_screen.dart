@@ -28,7 +28,15 @@ class AddTaskScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             FlatButton(
+              child: Text('추가',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
+            color: Colors.lightBlueAccent,
+              onPressed: (){
 
+              },
             ),
           ],
         ),
