@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp0130/widgets/task_tile.dart';
+import 'package:todoapp0130/models/task.dart';
 
 class TasksList extends StatefulWidget {
   @override
@@ -7,6 +8,12 @@ class TasksList extends StatefulWidget {
 }
 
 class _TasksListState extends State<TasksList> {
+
+  List<Task> tasks =[
+
+
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ListView(
