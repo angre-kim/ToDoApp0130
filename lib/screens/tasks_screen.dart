@@ -3,9 +3,13 @@ import 'package:todoapp0130/widgets/tasks_list.dart';
 
 class TasksScreen extends StatelessWidget {
 
-  Widget buildBottomsheet(BuildContext context) {
-    return Container();
-  }
+  //Widget buildBottomsheet(BuildContext context) {
+    //return Container();
+//  }
+ // Widget buildBottomsheet(BuildContext context) => Container();//위 구문과 같은 기능. arrow function.
+  // 또는  아래 onPressed에서
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +19,9 @@ class TasksScreen extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
         onPressed: (){
-          showModalBottomSheet(context: context, builder:buildBottomsheet);
+        //  showModalBottomSheet(context: context, builder:buildBottomsheet);//아래와 같이 수정가능
+
+          showModalBottomSheet(context: context, builder: (context) => Container());
         },
       ),
       body: Column(
