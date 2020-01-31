@@ -51,7 +51,7 @@ class TasksScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),//상단 좌측 정렬 하기 위해
+              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -59,7 +59,7 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: TaskTile(),
+              child: TasksList(),
             ),
           ),
         ],
@@ -68,28 +68,25 @@ class TasksScreen extends StatelessWidget {
   }
 }
 
-class TaskTile extends StatelessWidget {
-  const TaskTile({
-    Key key,
-  }) : super(key: key);
-
+class TasksList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        ListTile(
-          title: Text('할일 1'),
-          trailing: Checkbox(value: false),
-        ),
-        ListTile(
-          title: Text('할일 2'),
-          trailing: Checkbox(value: false),
-        ),
-        ListTile(
-          title: Text('할일 3'),
-          trailing: Checkbox(value: false),
-        )
+        TaskTile(),
+        TaskTile(),
+        TaskTile(),
       ],
+    );
+  }
+}
+
+class TaskTile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text('할일 1'),
+      trailing: Checkbox(value: false),
     );
   }
 }
