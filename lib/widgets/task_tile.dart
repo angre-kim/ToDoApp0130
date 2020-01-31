@@ -5,7 +5,9 @@ class TaskTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text('할일 1'),
-      trailing: Checkbox(value: false),
+      trailing: Checkbox(
+          activeColor: Colors.lightBlue,
+          value: false),
     );
   }
 }
