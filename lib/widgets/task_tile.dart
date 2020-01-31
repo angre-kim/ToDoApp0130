@@ -10,7 +10,7 @@ class TaskTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        '할일 1',
+        taskTitle,
         style: TextStyle(
             decoration: isChecked ? TextDecoration.lineThrough : null),
       ),
@@ -25,11 +25,11 @@ class TaskTile extends StatelessWidget {
 
 
 
-(bool checkboxState) {
-setState(() {
-isChecked = checkboxState;
-});
-},
+//(bool checkboxState) {
+//setState(() {
+//isChecked = checkboxState;
+//});
+//},
 
 
 
