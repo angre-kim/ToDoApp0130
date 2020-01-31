@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TaskTile extends StatefulWidget {
-  @override
-  _TaskTileState createState() => _TaskTileState();
-}
-
-class _TaskTileState extends State<TaskTile> {
+class TaskTile extends StatelessWidget {
   bool isChecked = true;
 
   @override
