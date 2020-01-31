@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TaskTile extends StatelessWidget {
+class TaskTile extends StatefulWidget {
   @override
+  _TaskTileState createState() => _TaskTileState();
+}
+
+class _TaskTileState extends State<TaskTile> {
+  bool isChecked = false;
+
   Widget build(BuildContext context) {
     return ListTile(
       title: Text('할일 1'),
@@ -10,23 +16,20 @@ class TaskTile extends StatelessWidget {
   }
 }
 
-class TaskCheckbox extends StatefulWidget {
-  @override
-  _TaskCheckboxState createState() => _TaskCheckboxState();
-}
+class TaskCheckbox extends StatelessWidget {
 
-class _TaskCheckboxState extends State<TaskCheckbox> {
-  bool isChecked = false; //2. 변수선언
+  final bool checkboxState;
+  TaskCheckbox({this.checkboxState})
 
   @override
   Widget build(BuildContext context) {
     return Checkbox(
       activeColor: Colors.lightBlue,
-      value: isChecked, //4.
-      onChanged: (newValue) {        //1. newValue가 입력되면
-        setState(() {});  //5.
-        isChecked = newValue; //3.
-      },
+      value: checkboxState,
+      onChanged: (newValue) {
+//        setState(() {});
+//        isChecked = newValue;
+    },
     );
   }
 }
