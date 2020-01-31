@@ -11,17 +11,20 @@ class TaskTile extends StatelessWidget {
 }
 
 class TaskCheckbox extends StatefulWidget {
-
-
   @override
   _TaskCheckboxState createState() => _TaskCheckboxState();
 }
 
 class _TaskCheckboxState extends State<TaskCheckbox> {
+
+  bool newValue = false;//2. 변수선언
+
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-        activeColor: Colors.lightBlue,
-        value: false);
+      activeColor: Colors.lightBlue,
+      value: true,
+      onChanged: (newValue) {}, //1. newValue가 입력되면
+    );
   }
 }
