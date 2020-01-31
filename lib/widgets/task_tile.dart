@@ -17,9 +17,8 @@ class _TaskTileState extends State<TaskTile> {
 }
 
 class TaskCheckbox extends StatelessWidget {
-
   final bool checkboxState;
-  TaskCheckbox({this.checkboxState})
+  TaskCheckbox({this.checkboxState});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class TaskCheckbox extends StatelessWidget {
       onChanged: (newValue) {
 //        setState(() {});
 //        isChecked = newValue;
-    },
+      },
     );
   }
 }
