@@ -7,6 +7,7 @@ class AddTaskScreen extends StatelessWidget {
       color: Color(0xff757575), //전체 색상을 흐리게 주고
       child: Container(
         //좌우 각지게 만들기위해 하나 더 생성
+        padding: EdgeInsets.all(20.0),//할일추가 윗부분 padding
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
