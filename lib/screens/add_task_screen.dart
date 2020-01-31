@@ -15,9 +15,11 @@ class AddTaskScreen extends StatelessWidget {
           ),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
               '할일 추가',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.lightBlueAccent,
                 fontSize: 30.0,
@@ -28,15 +30,14 @@ class AddTaskScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             FlatButton(
-              child: Text('추가',
-              style: TextStyle(
-                color: Colors.white,
+              child: Text(
+                '추가',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-              ),
-            color: Colors.lightBlueAccent,
-              onPressed: (){
-
-              },
+              color: Colors.lightBlueAccent,
+              onPressed: () {},
             ),
           ],
         ),
