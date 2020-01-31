@@ -6,11 +6,15 @@ class TaskTile extends StatefulWidget {
 }
 
 class _TaskTileState extends State<TaskTile> {
-  bool isChecked = false;
+  bool isChecked = true;
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text('할일 1'),
+      title: Text(
+        '할일 1',
+        style: TextStyle(
+            decoration: isChecked ? TextDecoration.lineThrough : null),
+      ),
       trailing: TaskCheckbox(isChecked),
     );
   }
@@ -27,7 +31,7 @@ class TaskCheckbox extends StatelessWidget {
       value: checkboxState,
       onChanged: (newValue) {
 //        setState(() {});
-     //   isChecked = newValue;
+        //   isChecked = newValue;
       },
     );
   }
