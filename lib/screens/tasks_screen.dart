@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp0130/widgets/tasks_list.dart';
 import 'package:todoapp0130/screens/add_task_screen.dart';
-import 'package:todoapp0130/models/task.dart';
-
+import 'package:provider/provider.dart';
+import 'package:todoapp0130/models/task_data.dart';
 class TasksScreen extends StatefulWidget {
 
   @override
@@ -24,9 +24,9 @@ class _TasksScreenState extends State<TasksScreen> {
                 context: context,
                 builder: (context) =>AddTaskScreen(
                       (newTaskTitle) {
-                        setState(() {
-                          tasks.add(Task(name: newTaskTitle));
-                        });
+//                        setState(() {
+//                          tasks.add(Task(name: newTaskTitle));
+//                        });
 Navigator.pop(context);//입력 후 자동 dismiss 시키지 위해
               },
               ),
@@ -64,7 +64,7 @@ Navigator.pop(context);//입력 후 자동 dismiss 시키지 위해
                   ),
                 ),
                 Text(
-                  '${tasks.length}개의 할일',
+                  '${Provider.of<TaskData>(context).tasks.length}개의 할일',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0,
@@ -83,7 +83,7 @@ Navigator.pop(context);//입력 후 자동 dismiss 시키지 위해
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: TasksList(tasks),
+              child: TasksList(),
             ),
           ),
         ],
