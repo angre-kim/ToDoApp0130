@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp0130/widgets/tasks_list.dart';
 import 'package:todoapp0130/screens/add_task_screen.dart';
+import 'package:todoapp0130/models/task.dart';
 
-class TasksScreen extends StatelessWidget {
-  //Widget buildBottomsheet(BuildContext context) {
-  //return Container();
-//  }
-  // Widget buildBottomsheet(BuildContext context) => Container();//위 구문과 같은 기능. arrow function.
-  // 또는  아래 onPressed에서
+class TasksScreen extends StatefulWidget {
+
+  @override
+  _TasksScreenState createState() => _TasksScreenState();
+}
+
+class _TasksScreenState extends State<TasksScreen> {
+  List<Task> tasks =[
+    Task(name: '우유사기'),
+    Task(name: '빵사기'),
+    Task(name: '과자사기'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +86,7 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: TasksList(),
+              child: TasksList(tasks),
             ),
           ),
         ],
