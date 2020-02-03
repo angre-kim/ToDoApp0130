@@ -24,16 +24,17 @@ class _TasksScreenState extends State<TasksScreen> {
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
         onPressed: () {
-          //  showModalBottomSheet(context: context, builder:buildBottomsheet);//아래와 같이 수정가능
-
-          showModalBottomSheet(
-              context: context,
-              isScrollControlled: true, //modal 화면이 full screen 되게
-              builder: (context) => SingleChildScrollView(//키보드 위로 창 보이게
-                  child: Container(
-                      padding: EdgeInsets.only(
-                          bottom: MediaQuery.of(context).viewInsets.bottom),
-                      child: AddTaskScreen())));
+              showModalBottomSheet(
+                context: context,
+                builder: (context) =>AddTaskScreen(
+                      (newTaskTitle) {
+                        setState(() {
+                          tasks.add(Task(name: newTaskTitle));
+                        });
+Navigator.pop(context);//입력 후 자동 dismiss 시키지 위해
+              },
+              ),
+              );
         },
       ),
       body: Column(
@@ -67,7 +68,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   ),
                 ),
                 Text(
-                  'sdfsd',
+                  '${tasks.length}개의 할일',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0,
