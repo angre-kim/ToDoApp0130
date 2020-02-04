@@ -57,7 +57,7 @@ Navigator.pop(context);//입력 후 자동 dismiss 시키지 위해
                   ),
                 ),
                 Text(
-                  '${Provider.of<TaskData>(context).tasks.length}개의 할일',
+                  '${Provider.of<TaskData>(context).taskCount}개의 할일',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18.0,
