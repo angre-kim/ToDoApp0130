@@ -3,8 +3,8 @@ import 'package:todoapp0130/widgets/tasks_list.dart';
 import 'package:todoapp0130/screens/add_task_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:todoapp0130/models/task_data.dart';
-class TasksScreen extends StatelessWidget {
 
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,17 +13,10 @@ class TasksScreen extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
         onPressed: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (context) =>AddTaskScreen(
-                      (newTaskTitle) {
-//                        setState(() {
-//                          tasks.add(Task(name: newTaskTitle));
-//                        });
-Navigator.pop(context);//입력 후 자동 dismiss 시키지 위해
-              },
-              ),
-              );
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => AddTaskScreen(),
+          );
         },
       ),
       body: Column(
