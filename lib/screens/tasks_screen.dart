@@ -3,14 +3,7 @@ import 'package:todoapp0130/widgets/tasks_list.dart';
 import 'package:todoapp0130/screens/add_task_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:todoapp0130/models/task_data.dart';
-class TasksScreen extends StatefulWidget {
-
-  @override
-  _TasksScreenState createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
-
+class TasksScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
