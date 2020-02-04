@@ -9,6 +9,10 @@ class TaskData extends ChangeNotifier {
     Task(name: '과자사기'),
   ];
 
+  List<Task> get tasks {
+    return _tasks;
+  }
+
   int get taskCount {
     return _tasks.length;
   }
